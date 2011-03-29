@@ -1,0 +1,12 @@
+<%= form_for @user do |f| %>
+
+    <p style="color:red;font-weight:bold;"><%= @user.errors.full_messages.to_sentence %></p>
+
+    Email
+    <%= f.text_field :email %>
+    <br />
+    CRN
+    <%= f.text_field :crn %>
+    <br />
+    <%= f.submit 'submit' %>
+<% end %>
