@@ -9,10 +9,6 @@ class User < ActiveRecord::Base
   end
 
   def course_available?
-    if course.enrollment < course.limit
-      "available"
-    else
-      "not available"
-    end
+    return course.enrollment < course.limit
   end
 end
